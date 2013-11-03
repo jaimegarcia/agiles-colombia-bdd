@@ -250,7 +250,7 @@ h2 {
   margin-bottom: 8px;
 }
 h3 {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: normal;
   margin-bottom: 24px;
   color: #606060;
@@ -264,6 +264,7 @@ ul {
 }
 li {
   margin-bottom: 12px;
+  font-size: 32px;
 }
 p {
   margin: 0 100px 12px;
@@ -274,22 +275,46 @@ a {
   text-decoration: none;
 }
 section.blue {
-  background: #00b7ea;
+  background: #005d69;
   color: #fff8dc;
 }
+section.blue li {
+  font-size: 72px;
+}
+section.blue .important {
+  color: #00ff8e;
+  font-size: 72px;
+}
+section.green {
+  background: #00ff8e;
+}
+section.green .important {
+  color: #ff4043;
+  font-size: 72px;
+}
 section.red {
-  background: #800000;
+  background: #ff4043;
   color: #fff;
 }
 section.red li {
   font-size: 72px;
 }
+section.red .important {
+  color: #00ff8e;
+  font-size: 72px;
+}
 section.white {
   background: #fff;
-  color: #00b7ea;
+  color: #005d69;
 }
 section.white li {
   color: #000;
+}
+section.solido {
+  background-image: url("../img/fondo-isolido.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 section.robot {
   background-image: url("../img/robot.gif");
@@ -299,6 +324,48 @@ section.robot {
 }
 section.panic {
   background-image: url("../img/johnny-depp-panics.gif");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+section.chaos {
+  background-image: url("../img/chaos.gif");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+section.complex {
+  background-image: url("../img/complex.gif");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+section.surprise {
+  background-image: url("../img/surprise.gif");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+section.wait {
+  background-image: url("../img/wait.gif");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+section.happy {
+  background-image: url("../img/happy.gif");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+section.invention {
+  background-image: url("../img/invention.gif");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+section.no {
+  background-image: url("../img/no.gif");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

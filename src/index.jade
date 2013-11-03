@@ -18,7 +18,7 @@ html
         h1 Behaviour-Driven Development
         h2 Conectando User Stories con Pruebas Automáticas
 
-      section.robot
+      section.solido
         .tint
             h1 Jaime Andrés García
             h2 CEO - Ingenio Sólido
@@ -26,48 +26,223 @@ html
             h2 @jaimegarcia
 
       section.white
-        h1 Pero primero una pequeña historia ....
+        h1 Pero primero una historia ....
+
+      // Diapositiva sobre el proyecto incluyendo gráficas de D3....
 
       section.white
         h2 Situación
-        ul
-          li Deadline 1 mes
-          li Proyecto Java de alta complejidad
-          li Recursos disponibles 3
-          li Recursos necesarios 7
-          li Perfil de los recursos: Expertos en Java con 3 años de experiencia
+        h3 Deadline 1 mes
+        h3 Proyecto Hardware + WEB + Java de alta complejidad
+        h3 Recursos disponibles 3
+        h3 Recursos necesarios 7
+        h3 Perfil de los recursos faltantes: 4 Expertos en Java con más de 3 años de experiencia
 
       section.panic
         .tint
           h1 1.Entrar en pánico
 
-      section.white
+      section.green
         h1 2.Contratar 4 expertos en Java en Colombia
 
       section.red
         ul
-          li Realidad
-          li Es bastante difícil encontrar 4 expertos disponibles para trabajar un mes en Colombia
-      section.white
-        h2 Solución
+          li
+            h1 Realidad
+          li
+            h2 Es difícil encontrar 4 expertos colombianos en Java, disponibles para trabajar un mes
+
+      section.blue
         ul
-          li Deadline 1 mes
-          li sds
-          li Recursos disponibles 3
-          li Recursos necesarios 7
-          li Perfil de los recursos: Expertos en Java con 3 años de experiencia
+          li
+            h1 Solución
+          li
+            h2 Contratación de freelancers expertos disponibles en el mundo
+
+      section.white
+        h2 Características de la contratación
+        h3 Radicados en la India
+        h3 Hablan inglés
+        h3 Disponibilidad de 56 horas semanales
+
+      section.chaos
+        .tint
+          h1 Cómo evitar el caos?
+
+      section.white
+        h2 Metodología
+        h3 Scrum
+        h3 Sprints de una semana
+        h3 Explicar verbalmente historias de usuario
+        h3 Historias de usuario con mayor detalle - Pasos y Escenarios
+        h3 Segmentación de las tareas para reducir complejidad
+
+      section.complex
+        .tint
+          h1 Sin embargo, el proceso es bastante complejo...
+
+      section.surprise
+        .tint
+          h1 Afortunadamente, uno de los desarrolladores tiene una buena idea
+
 
       section
-        h2 Syntax Highlighting
-        h3.bullet Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
+        h2 Ejemplo de implementación
         hr
         code.language-javascript
           pre.
-            bespoke.horizontal.from('article', {
-              bullets: 'li, .bullet',
-              hash: true,
-              state: true
-            });
+            // Descripción User Story
+
+            // Paso 1
+
+            funcionPaso1(param1,param2,...);
+
+            // Comentario Resultado Esperado
+            print(resultadoPaso1);
+
+            // Paso 2
+
+            funcionPaso2(param1,param2,...);
+
+            // Comentario Resultado Esperado
+            print(resultadoPaso2);
+
+            // Paso 3 ...
+
+      section.blue
+        h1 Momento de Agregar Escenarios
+
+      section
+        h2 Ejemplo de implementación
+        hr
+        code.language-javascript
+          pre.
+            // Descripción User Story
+
+            // Escenario 1
+
+              // Paso 1
+              funcionPaso1(param1,param2,...);
+              print(resultadoPaso1);
+
+              // Paso 2
+              funcionPaso2(param1,param2,...);
+              print(resultadoPaso2);
+
+              // Paso 3 ..
+
+            //Comentario Resultado Esperado Escenario 1
+            print(resultadoEscenario1);
+
+            // Escenario 2
+                            .
+                            .
+                            .
+
+            // Escenario 3 ..
+
+      section.blue
+        h1 Agregando nuevas condiciones en cada paso
+
+
+      section
+        h2 Ejemplo de implementación
+        hr
+        code.language-javascript
+          pre.
+            // Descripción User Story
+            // Escenario 1
+              // Paso 1
+              funcionPaso1(param1,param2,...);
+              print(resultadoPaso1);
+              // Paso 2
+                //Paso 2a
+                funcionPaso2a(param1,param2,...);
+                print(resultadoPaso2a);
+                //Paso 2b
+                funcionPaso2b(param1,param2,...);
+                print(resultadoPaso2b);
+              // Paso 3 ..
+            //Comentario Resultado Esperado Escenario 1
+            print(resultadoEscenario1);
+            // Escenario 2
+                            .
+                            .
+                            .
+            // Escenario 3 ..
+
+      section.wait
+        .tint
+          h1 Espera un minuto..
+
+      section.red
+        h2
+          | No tengo tiempo para verificar si cada que se agrega un paso o condición, se
+          span.important  rompe
+          |  alguna funcionalidad
+
+      section.green
+        h1 Necesito automatizar el proceso...
+
+      section.green
+        h1
+          | Necesito
+          span.important  Pruebas Automáticas!!!
+      section
+        h2 Ejemplo de implementación
+        hr
+        code.language-javascript
+          pre.
+            // Descripción User Story
+            // Escenario 1
+              // Paso 1
+              funcionPaso1(param1,param2,...);
+              if(resultadoPaso1 != resultadoEsperadoPaso1)
+                print("Falló Escenario1 Paso1");
+              // Paso 2
+                //Paso 2a
+                funcionPaso2a(param1,param2,...);
+                if(resultadoPaso2a != resultadoEsperadoPaso2a)
+                  print("Falló Escenario1 Paso2a");
+                //Paso 2b
+                if(resultadoPaso2b != resultadoEsperadoPaso2b)
+                  print("Falló Escenario1 Paso2b");
+                            .
+                            .
+                            .
+            // Escenario 2 ..
+
+      section.happy
+        .tint
+          h1 Logramos cumplir con el objetivo. Celebración!!!!
+
+      section.invention
+        .tint
+          h1 Un momento.... Será que acabamos de inventar algo?
+
+      section.no
+        .tint
+          h1 No realmente
+
+      //Invención
+      // Explicación BDD
+      // Beneficios BDD
+      section.blue
+        h1 Ya existe una metodología que sigue estos lineamientos...
+
+      section.blue
+        h1
+          | Se llama
+          span.important  Behaviour-Driven Development
+
+
+
+
+
+      section
+        h1 Cómo estamos trabajando en este momento...
+
+
 
       section(data-bespoke-hash='named-route')
         h2 Named Route

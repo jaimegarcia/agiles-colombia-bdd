@@ -310,6 +310,12 @@ section.white {
 section.white li {
   color: #000;
 }
+section.dashboard {
+  background-image: url("../img/dashboard.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
 section.solido {
   background-image: url("../img/fondo-isolido.png");
   -webkit-background-size: cover;
@@ -366,6 +372,18 @@ section.invention {
 }
 section.no {
   background-image: url("../img/no.gif");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+section.thankyou {
+  background-image: url("../img/thankyou.gif");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+section.paradigm {
+  background-image: url("../img/paradigm.gif");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

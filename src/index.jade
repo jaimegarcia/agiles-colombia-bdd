@@ -28,12 +28,15 @@ html
       section.white
         h1 Pero primero una historia ....
 
-      // Diapositiva sobre el proyecto incluyendo gráficas de D3....
+      section.dashboard
+        .tint
+          h1 Proyecto
+          h2 Hardware + Web + Java + Data Visualization
 
       section.white
         h2 Situación
         h3 Deadline 1 mes
-        h3 Proyecto Hardware + WEB + Java de alta complejidad
+        h3 Alta complejidad
         h3 Recursos disponibles 3
         h3 Recursos necesarios 7
         h3 Perfil de los recursos faltantes: 4 Expertos en Java con más de 3 años de experiencia
@@ -235,36 +238,151 @@ html
           | Se llama
           span.important  Behaviour-Driven Development
 
+      section.white
+        h2 Esta basada en Test-Driven Development
+        img(src="img/tdd-flow.gif")
+        h4 Fuente: http://diogoosorio.com/blog/entry/test-driven-development-tdd-using-phpunit
 
+      section.white
+        h2 Behaviour-Driven Development
+        img(src="img/bdd-flow.png")
+        h4 Fuente: http://www.testingexcellence.com/automated-testing-help-behavior-driven-testing/
 
+      section.blue
+        h1
+          | Parte del principio de construir la prueba que guía el desarrollo en base del
+          spna.important  comportamiento
+          |  deseado
 
-
-      section
-        h1 Cómo estamos trabajando en este momento...
-
-
-
-      section(data-bespoke-hash='named-route')
-        h2 Named Route
-        h3.bullet Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
-        p Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.
-
-      section(data-bespoke-state='emphatic')
-        h2 Emphatic Slide!
-        h3.bullet Powered by <a href="https://github.com/markdalgleish/bespoke-state">bespoke-state</a>
-
-      section
-        h2.bullet Just the beginning...
-        hr
-        ul
-          li Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em>
-          li Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em>
-          li Edit JavaScript in <em>'src/scripts/main.js'</em>
-        hr
+      section.blue
         ul
           li
-            strong Enjoy! :)
-            a(href='http://twitter.com/markdalgleish')  -@markdalgleish
+            h1 En las metodologías ágiles, ya tenemos la descripción del comportamiento deseado...
+          li
+            h2.important Las historias de usuarios
+
+      section.green
+        ul
+          li
+            h1 Además, tenemos los criterios de aceptación de estas historias...
+          li
+            h2.important Los escenarios
+
+      section
+        h2 Estructura de la historia de usuario
+        code.language-markup
+          pre.
+            Title (one line describing the story)
+
+            Narrative:
+            As a [role]
+            I want [feature]
+            So that [benefit]
+
+            Acceptance Criteria: (presented as Scenarios)
+
+            Scenario 1: Title
+            Given [context]
+            And [some more context]...
+            When  [event]
+            Then  [outcome]
+            And [another outcome]...
+
+            Scenario 2: ...
+        h4 Fuente: http://dannorth.net/whats-in-a-story/
+
+
+      section
+        h2 Ejemplo de historia de usuario
+        code.language-markup
+          pre.
+            Story: Account Holder withdraws cash
+            As an Account Holder
+            I want to withdraw cash from an ATM
+            So that I can get money when the bank is closed
+
+            Scenario 1: Account has sufficient funds
+            Given the account balance is \$100
+              And the card is valid
+              And the machine contains enough money
+            When the Account Holder requests \$20
+            Then the ATM should dispense \$20
+              And the account balance should be \$80
+              And the card should be returned
+
+            Scenario 2: Account has insufficient funds
+            Given the account balance is \$10
+              And the card is valid
+              And the machine contains enough money
+            When the Account Holder requests \$20
+            Then the ATM should not dispense any money
+              And the ATM should say there are insufficient funds
+              And the account balance should be \$20
+              And the card should be returned
+        h4 Fuente: http://dannorth.net/whats-in-a-story/
+
+      section
+        h2 Ejemplo de BDD - Parte 1
+        code.language-javascript
+          pre.
+            // Story: Account Holder withdraws cash
+            // As an Account Holder
+            // I want to withdraw cash from an ATM
+            // So that I can get money when the bank is closed
+
+            // Scenario 1: Account has sufficient funds
+
+              // Given the account balance is \$100
+              accountBalance = 100;
+
+              // And the card is valid
+              setCardValidState(card,true);
+
+              // And the machine contains enough money
+              setMachineMoney(machine,1000000);
+
+
+      section
+        h2 Ejemplo de BDD - Parte 2
+        code.language-javascript
+          pre.
+              // When the Account Holder requests \$20
+              accountRequest = 20;
+
+              // Then the ATM should dispense \$20
+              atmValue = getMoneyFromATM(accountRequest,card,machine);
+              if(atmValue==20) print("OK");
+              else print("Fail");
+
+              // And the account balance should be \$80
+              accountBalance = getCurrentBalance(card);
+              if(accountBalance==20) print("OK");
+              else print("Fail");
+
+              // And the card should be returned
+              if(isCardReturned(card) == true) print("OK");
+              else print("Fail");
+
+      section.white
+        h1 Beneficios del uso de BDD
+        h3 Comunicación entre los clientes y los técnicos
+        h3 Análisis de posibles soluciones - diseño ágil
+        h3 Se reduce la afectación de código de otros desarrolladores
+        h3 Aumento de calidad del producto
+        h3 Validación directa de la historia del usuario
+        h3 Facilidad para cambiar o actualizar módulos del sistema
+        h3 Documentación Automática!!!
+
+      section.red
+        h1 Entonces que nos hace falta ...
+
+      section.paradigm
+        .tint
+          h1 Cambiar el paradigma
+
+      section.thankyou
+        .tint
+          h1 Muchas gracias por su atención
 
     script(src='bower_components/bespoke.js/dist/bespoke.min.js')
     script(src='bower_components/bespoke-bullets/dist/bespoke-bullets.min.js')

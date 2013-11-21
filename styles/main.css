@@ -322,6 +322,9 @@ section.solido {
   -moz-background-size: cover;
   background-size: cover;
 }
+section.solido a {
+  font-size: 40px;
+}
 section.robot {
   background-image: url("../img/robot.gif");
   -webkit-background-size: cover;

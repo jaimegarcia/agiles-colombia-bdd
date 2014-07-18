@@ -13,6 +13,8 @@ pre[class*="language-"] {
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
+	word-break: normal;
+
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -108,6 +110,9 @@ pre[class*="language-"] {
 	color: #07a;
 }
 
+.token.function {
+	color: #DD4A68;
+}
 
 .token.regex,
 .token.important {
